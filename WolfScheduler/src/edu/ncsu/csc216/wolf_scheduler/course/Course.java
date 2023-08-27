@@ -1,5 +1,5 @@
 package edu.ncsu.csc216.wolf_scheduler.course;
-
+/** Creating the Course Class. */
 public class Course {
 	/** Course's name. */
 	private String name;
@@ -235,7 +235,7 @@ public class Course {
 	 */
 	@Override
 	public String toString() {
-	    if (meetingDays.equals("A")) {
+	    if ("A".equals(meetingDays)) {
 	        return name + "," + title + "," + section + "," + credits + "," + instructorId + "," + meetingDays;
 	    }
 	    return name + "," + title + "," + section + "," + credits + "," + instructorId + "," + meetingDays + "," + startTime + "," + endTime; 

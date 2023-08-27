@@ -436,18 +436,18 @@ public class CourseTest {
 		Course c10 = new Course("CSC 217", TITLE, SECTION, CREDITS, INSTRUCTOR_ID, MEETING_DAYS, START_TIME, END_TIME);
 
 		// Test for equality in both directions
-		assertTrue(c1.equals(c2));
-		assertTrue(c2.equals(c1));
+		assertEquals(c1, c2);
+		assertEquals(c2, c1);
 
 		// Test for each of the fields
-		assertFalse(c1.equals(c3));
-		assertFalse(c1.equals(c4));
-		assertFalse(c1.equals(c5));
-		assertFalse(c1.equals(c6));
-		assertFalse(c1.equals(c7));
-		assertFalse(c1.equals(c8));
-		assertFalse(c1.equals(c9));
-		assertFalse(c1.equals(c10));
+		assertNotEquals(c1, c3);
+		assertNotEquals(c1, c4);
+		assertNotEquals(c1, c5);
+		assertNotEquals(c1, c6);
+		assertNotEquals(c1, c7);
+		assertNotEquals(c1, c8);
+		assertNotEquals(c1, c9);
+		assertNotEquals(c1, c10);
 	}
 
 	/**
