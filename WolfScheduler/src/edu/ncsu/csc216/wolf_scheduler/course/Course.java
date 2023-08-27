@@ -28,7 +28,7 @@ public class Course {
 	 * Sets the Course's name.
 	 * @param name the name to set
 	 */
-	public void setName(String name) {
+	private void setName(String name) {
 		this.name = name;
 	}
 	/**
@@ -131,43 +131,38 @@ public class Course {
 	}
 	/**
 	 * Constructs a Course object with values for all fields.
-	 * @param name
-	 * @param title
-	 * @param section
-	 * @param credits
-	 * @param instructorId
-	 * @param meetingDays
-	 * @param startTime
-	 * @param endTime
+	 * @param name name of Course
+	 * @param title title of Course
+	 * @param section section of Course
+	 * @param credits credit hours for Course
+	 * @param instructorId instructor's unity id
+	 * @param meetingDays meeting days for Course as series of chars
+	 * @param startTime start time for Course
+	 * @param endTime end time for Course
 	 */
 	public Course(String name, String title, String section, int credits, String instructorId, String meetingDays,
-			int startTime, int endTime) {
-		this.name = name;
-		this.title = title;
-		this.section = section;
-		this.credits = credits;
-		this.instructorId = instructorId;
-		this.meetingDays = meetingDays;
-		this.startTime = startTime;
-		this.endTime = endTime;
+	        int startTime, int endTime) {
+	    setName(name);
+	    setTitle(title);
+	    setSection(section);
+	    setCredits(credits);
+	    setInstructorId(instructorId);
+	    setMeetingDays(meetingDays);
+	    setStartTime(startTime);
+	    setEndTime(endTime);
 	}
 	/**
 	 * Creates a Course with the given name, title, section, credits, instructorId, and meetingDays for 
 	 * courses that are arranged.
-	 * @param name
-	 * @param title
-	 * @param section
-	 * @param credits
-	 * @param instructorId
-	 * @param meetingDays
+	 * @param name name of Course
+	 * @param title title of Course
+	 * @param section section of Course
+	 * @param credits credit hours for Course
+	 * @param instructorId instructor's unity id
+	 * @param meetingDays meeting days for Course as series of chars
 	 */
 	public Course(String name, String title, String section, int credits, String instructorId, String meetingDays) {
-		this.name = name;
-		this.title = title;
-		this.section = section;
-		this.credits = credits;
-		this.instructorId = instructorId;
-		this.meetingDays = meetingDays;
+	    this(name, title, section, credits, instructorId, meetingDays, 0, 0);
 	}
 	/**
 	 * Generates a hashCode for Course using all fields.
