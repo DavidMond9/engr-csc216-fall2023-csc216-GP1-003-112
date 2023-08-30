@@ -304,41 +304,40 @@ public class CourseTest {
 		// The code below is commented out until you make some changes to Course.
 		// Once those are made, remove the line of code fail() and uncomment the
 		// provided tests.
-		fail();
 
 		// Test valid course with meeting times (not arranged)
-//		Course c1 = new Course(NAME, TITLE, SECTION, CREDITS, INSTRUCTOR_ID, MEETING_DAYS, START_TIME, END_TIME);
-//		assertAll("Course", 
-//				() -> assertEquals(NAME, c1.getName(), "incorrect name"), 
-//				() -> assertEquals(TITLE, c1.getTitle(), "incorrect title"),
-//				() -> assertEquals(SECTION, c1.getSection(), "incorrect section"), 
-//				() -> assertEquals(CREDITS, c1.getCredits(), "incorrect credits"),
-//				() -> assertEquals(INSTRUCTOR_ID, c1.getInstructorId(), "incorrect instructor id"),
-//				() -> assertEquals(MEETING_DAYS, c1.getMeetingDays(), "incorrect meeting days"), 
-//				() -> assertEquals(START_TIME, c1.getStartTime(), "incorrect start time"),
-//				() -> assertEquals(END_TIME, c1.getEndTime(), "incorrect end time"));
-//
-//		// Test valid course with arranged
-//		Course c2 = new Course(NAME, TITLE, SECTION, CREDITS, INSTRUCTOR_ID, "A");
-//		assertAll("Course", 
-//				() -> assertEquals(NAME, c2.getName(), "incorrect name"), 
-//				() -> assertEquals(TITLE, c2.getTitle(), "incorrect title"),
-//				() -> assertEquals(SECTION, c2.getSection(), "incorrect section"), 
-//				() -> assertEquals(CREDITS, c2.getCredits(), "incorrect credits"),
-//				() -> assertEquals(INSTRUCTOR_ID, c2.getInstructorId(), "incorrect instructor id"),
-//				() -> assertEquals("A", c2.getMeetingDays(), "incorrect meeting days"), 
-//				() -> assertEquals(0, c2.getStartTime(), "incorrect start time"),
-//				() -> assertEquals(0, c2.getEndTime(), "incorrect end time"));
-//
-//		c1.setMeetingDaysAndTime(meetingString, startTime, endTime);
-//		assertEquals(meetingString, c1.getMeetingDays());
-//		assertEquals(expectedStartTime, c1.getStartTime());
-//		assertEquals(expectedEndTime, c1.getEndTime());
-//
-//		c2.setMeetingDaysAndTime(meetingString, startTime, endTime);
-//		assertEquals(meetingString, c2.getMeetingDays());
-//		assertEquals(expectedStartTime, c2.getStartTime());
-//		assertEquals(expectedEndTime, c2.getEndTime());
+		Course c1 = new Course(NAME, TITLE, SECTION, CREDITS, INSTRUCTOR_ID, MEETING_DAYS, START_TIME, END_TIME);
+		assertAll("Course", 
+				() -> assertEquals(NAME, c1.getName(), "incorrect name"), 
+				() -> assertEquals(TITLE, c1.getTitle(), "incorrect title"),
+				() -> assertEquals(SECTION, c1.getSection(), "incorrect section"), 
+				() -> assertEquals(CREDITS, c1.getCredits(), "incorrect credits"),
+				() -> assertEquals(INSTRUCTOR_ID, c1.getInstructorId(), "incorrect instructor id"),
+				() -> assertEquals(MEETING_DAYS, c1.getMeetingDays(), "incorrect meeting days"), 
+				() -> assertEquals(START_TIME, c1.getStartTime(), "incorrect start time"),
+				() -> assertEquals(END_TIME, c1.getEndTime(), "incorrect end time"));
+
+		// Test valid course with arranged
+		Course c2 = new Course(NAME, TITLE, SECTION, CREDITS, INSTRUCTOR_ID, "A");
+		assertAll("Course", 
+				() -> assertEquals(NAME, c2.getName(), "incorrect name"), 
+				() -> assertEquals(TITLE, c2.getTitle(), "incorrect title"),
+				() -> assertEquals(SECTION, c2.getSection(), "incorrect section"), 
+				() -> assertEquals(CREDITS, c2.getCredits(), "incorrect credits"),
+				() -> assertEquals(INSTRUCTOR_ID, c2.getInstructorId(), "incorrect instructor id"),
+				() -> assertEquals("A", c2.getMeetingDays(), "incorrect meeting days"), 
+				() -> assertEquals(0, c2.getStartTime(), "incorrect start time"),
+				() -> assertEquals(0, c2.getEndTime(), "incorrect end time"));
+
+		c1.setMeetingDaysAndTime(meetingString, startTime, endTime);
+		assertEquals(meetingString, c1.getMeetingDays());
+		assertEquals(expectedStartTime, c1.getStartTime());
+		assertEquals(expectedEndTime, c1.getEndTime());
+
+		c2.setMeetingDaysAndTime(meetingString, startTime, endTime);
+		assertEquals(meetingString, c2.getMeetingDays());
+		assertEquals(expectedStartTime, c2.getStartTime());
+		assertEquals(expectedEndTime, c2.getEndTime());
 	}
 		
 	
@@ -375,25 +374,24 @@ public class CourseTest {
 		// The code below is commented out until you make some changes to Course.
 		// Once those are made, remove the line of code fail() and uncomment the
 		// provided tests.
-		fail();
 		
-//		Course c1 = new Course(NAME, TITLE, SECTION, CREDITS, INSTRUCTOR_ID, MEETING_DAYS, START_TIME, END_TIME);
-//		assertAll("Course", 
-//				() -> assertEquals(NAME, c1.getName(), "incorrect name"), 
-//				() -> assertEquals(TITLE, c1.getTitle(), "incorrect title"),
-//				() -> assertEquals(SECTION, c1.getSection(), "incorrect section"), 
-//				() -> assertEquals(CREDITS, c1.getCredits(), "incorrect credits"),
-//				() -> assertEquals(INSTRUCTOR_ID, c1.getInstructorId(), "incorrect instructor id"),
-//				() -> assertEquals(MEETING_DAYS, c1.getMeetingDays(), "incorrect meeting days"), 
-//				() -> assertEquals(START_TIME, c1.getStartTime(), "incorrect start time"),
-//				() -> assertEquals(END_TIME, c1.getEndTime(), "incorrect end time"));
-//		
-//		Exception exception = assertThrows(IllegalArgumentException.class,
-//				() -> c1.setMeetingDaysAndTime(meetingString, startTime, endTime));
-//		assertEquals("Invalid meeting days and times.", exception.getMessage(), "Incorrect exception thrown with invalid input.");
-//		assertEquals(MEETING_DAYS, c1.getMeetingDays(), "incorrect meeting days");
-//		assertEquals(START_TIME, c1.getStartTime(), "incorrect start time");
-//		assertEquals(END_TIME, c1.getEndTime(), "incorrect end time");
+		Course c1 = new Course(NAME, TITLE, SECTION, CREDITS, INSTRUCTOR_ID, MEETING_DAYS, START_TIME, END_TIME);
+		assertAll("Course", 
+				() -> assertEquals(NAME, c1.getName(), "incorrect name"), 
+				() -> assertEquals(TITLE, c1.getTitle(), "incorrect title"),
+				() -> assertEquals(SECTION, c1.getSection(), "incorrect section"), 
+				() -> assertEquals(CREDITS, c1.getCredits(), "incorrect credits"),
+				() -> assertEquals(INSTRUCTOR_ID, c1.getInstructorId(), "incorrect instructor id"),
+				() -> assertEquals(MEETING_DAYS, c1.getMeetingDays(), "incorrect meeting days"), 
+				() -> assertEquals(START_TIME, c1.getStartTime(), "incorrect start time"),
+				() -> assertEquals(END_TIME, c1.getEndTime(), "incorrect end time"));
+		
+		Exception exception = assertThrows(IllegalArgumentException.class,
+				() -> c1.setMeetingDaysAndTime(meetingString, startTime, endTime));
+		assertEquals("Invalid meeting days and times.", exception.getMessage(), "Incorrect exception thrown with invalid input.");
+		assertEquals(MEETING_DAYS, c1.getMeetingDays(), "incorrect meeting days");
+		assertEquals(START_TIME, c1.getStartTime(), "incorrect start time");
+		assertEquals(END_TIME, c1.getEndTime(), "incorrect end time");
 		
 	}
 
@@ -405,18 +403,17 @@ public class CourseTest {
 		// The code below is commented out until you make some changes to Course.
 		// Once those are made, remove the line of code fail() and uncomment the
 		// provided tests.
-		fail();
 
-//		Course c1 = new Course(NAME, TITLE, SECTION, CREDITS, INSTRUCTOR_ID, MEETING_DAYS, START_TIME, END_TIME);
-//		assertEquals("MW 1:30PM-2:45PM", c1.getMeetingString());
-//		Course c2 = new Course(NAME, TITLE, SECTION, CREDITS, INSTRUCTOR_ID, MEETING_DAYS, 900, 1035);
-//		assertEquals("MW 9:00AM-10:35AM", c2.getMeetingString());
-//		Course c3 = new Course(NAME, TITLE, SECTION, CREDITS, INSTRUCTOR_ID, "A");
-//		assertEquals("Arranged", c3.getMeetingString());
-//		Course c4 = new Course(NAME, TITLE, SECTION, CREDITS, INSTRUCTOR_ID, "TH", 1145, 1425);
-//		assertEquals("TH 11:45AM-2:25PM", c4.getMeetingString());
-//		Course c5 = new Course(NAME, TITLE, SECTION, CREDITS, INSTRUCTOR_ID, "TH", 1200, 1300);
-//		assertEquals("TH 12:00PM-1:00PM", c5.getMeetingString());
+		Course c1 = new Course(NAME, TITLE, SECTION, CREDITS, INSTRUCTOR_ID, MEETING_DAYS, START_TIME, END_TIME);
+		assertEquals("MW 1:30PM-2:45PM", c1.getMeetingString());
+		Course c2 = new Course(NAME, TITLE, SECTION, CREDITS, INSTRUCTOR_ID, MEETING_DAYS, 900, 1035);
+		assertEquals("MW 9:00AM-10:35AM", c2.getMeetingString());
+		Course c3 = new Course(NAME, TITLE, SECTION, CREDITS, INSTRUCTOR_ID, "A");
+		assertEquals("Arranged", c3.getMeetingString());
+		Course c4 = new Course(NAME, TITLE, SECTION, CREDITS, INSTRUCTOR_ID, "TH", 1145, 1425);
+		assertEquals("TH 11:45AM-2:25PM", c4.getMeetingString());
+		Course c5 = new Course(NAME, TITLE, SECTION, CREDITS, INSTRUCTOR_ID, "TH", 1200, 1300);
+		assertEquals("TH 12:00PM-1:00PM", c5.getMeetingString());
 	}
 
 	/**
