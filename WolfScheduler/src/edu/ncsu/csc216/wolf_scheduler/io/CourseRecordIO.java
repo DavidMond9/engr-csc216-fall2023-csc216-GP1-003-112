@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.util.ArrayList;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 import edu.ncsu.csc216.wolf_scheduler.course.Course;
@@ -13,7 +14,7 @@ import edu.ncsu.csc216.wolf_scheduler.course.Course;
 /**
  * Reads Course records from text files.  Writes a set of CourseRecords to a file.
  * 
- * @author Sarah Heckman
+ * @author David Mond
  */
 public class CourseRecordIO {
 
@@ -61,11 +62,60 @@ public class CourseRecordIO {
 	    //Return the ArrayList with all the courses we read!
 	    return courses;
 	}
-
+	/*
+	 * Reads course string and returns a course object that defines the courses characteristics.
+	 * @param nextLine nextLine input for the scanner to read the course string.
+	 * @return Course returns a course object for the inputed course string.
+	 */
     private static Course readCourse(String nextLine) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+    	//create scanner
+		Scanner courseReader = new Scanner(nextLine);
+		//set , as delimiter
+		courseReader.useDelimiter(",");
+		
+		try {
+			// store each token in a local variable
+			String courseName = courseReader.next();
+			String courseTitle = courseReader.next();
+			String courseSection = courseReader.next();
+			int courseCredits = courseReader.nextInt();
+			String courseInstructorId = courseReader.next();
+			String courseMeetingDays = courseReader.next();
+			
+			//arranged
+			if("A".equals(courseMeetingDays)) {
+				//if there is a time listed, throw exception
+				if(courseReader.hasNext()) {
+					courseReader.close();
+					throw new IllegalArgumentException("Too many tokens.");
+				}
+				else {
+					courseReader.close();
+					//course constructor without times
+					return new Course(courseName, courseTitle, courseSection, courseCredits, courseInstructorId, courseMeetingDays);
+				}
+			}
+			else {
+				//store time tokens in local variables
+				int courseStartTime = courseReader.nextInt();
+				int courseEndTime = courseReader.nextInt();
+				
+				//if too many tokens, throw exception
+				if(courseReader.hasNext()) {
+					courseReader.close();
+					throw new IllegalArgumentException("Too many tokens.");
+				}
+				courseReader.close();
+				//course constructor with times
+				return new Course(courseName, courseTitle, courseSection, courseCredits, courseInstructorId, courseMeetingDays, courseStartTime, courseEndTime);
+			}
+		}
+		//throw IAE if NoSuchElementException
+		catch(NoSuchElementException e) {
+			courseReader.close();
+			throw new IllegalArgumentException("IllegalArgumentException.");
+		}
+    }
 
 	/**
      * Writes the given list of Courses to 
