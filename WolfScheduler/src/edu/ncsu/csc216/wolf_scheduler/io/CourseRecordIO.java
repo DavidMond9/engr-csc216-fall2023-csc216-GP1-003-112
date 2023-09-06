@@ -62,7 +62,7 @@ public class CourseRecordIO {
 	    //Return the ArrayList with all the courses we read!
 	    return courses;
 	}
-	/*
+	/**
 	 * Reads course string and returns a course object that defines the courses characteristics.
 	 * @param nextLine nextLine input for the scanner to read the course string.
 	 * @return Course returns a course object for the inputed course string.

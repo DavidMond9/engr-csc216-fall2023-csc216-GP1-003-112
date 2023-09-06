@@ -217,8 +217,7 @@ public class Course {
 	}
 
 	/**
-	 * Sets the meeting days and times with a start and end time.
-	 * 
+	 * Sets the meeting days and times with a start and end time.	 * 
 	 * @param meetingDays the meeting days for the courses.
 	 * @param startTime   the starting time for the courses.
 	 * @param endTime     the ending time for the courses.
