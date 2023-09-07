@@ -1,6 +1,13 @@
 package edu.ncsu.csc216.wolf_scheduler.course;
 
-/** Creating the Course Class. */
+/** Creating the Course Class. Defines a course inside a schedule with different fields
+ * such as name, title, section, credits, instructorId, meetingDays, startTime, and endTime.
+ * It has many methods such as getName, setName, getTitle, setTitle, getSection, setSection,
+ * getCredits, setCredits, getInstructorId, setInstructorId, getMeetingDays, getStartTime,
+ * getEndTime, getMeetingString, and setMeetingDaysAndTime. It also has two constructors,
+ * one for some fields, a course with no times or days, and one for all fields, a full Course.
+ * @author David Mond
+ */
 public class Course {
 	/** Course's name. */
 	private String name;
@@ -376,9 +383,9 @@ public class Course {
 	}
 
 	/**
-	 * Constructs a Course object with values for all fields.
+	 * Constructs a Course object with values for all fields and uses encapsulation.
 	 * 
-	 * @param name         name of Course
+	 * @param name         name of Course 
 	 * @param title        title of Course
 	 * @param section      section of Course
 	 * @param credits      credit hours for Course

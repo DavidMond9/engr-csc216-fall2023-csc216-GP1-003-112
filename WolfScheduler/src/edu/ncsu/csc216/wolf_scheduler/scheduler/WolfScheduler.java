@@ -5,7 +5,11 @@ import java.util.ArrayList;
 import edu.ncsu.csc216.wolf_scheduler.course.Course;
 import edu.ncsu.csc216.wolf_scheduler.io.CourseRecordIO;
 /**
- * Creating the WolfScheduler class, outline of the catalog and schedule.
+ * Creating the WolfScheduler class, outline of the catalog and schedule. There are many methods
+ * in this class that work with the catalog and schedule. There are three fields in this class,
+ * the schedule and catalog which are ArrayLists of type Course, and then the title field which
+ * is a string, and represents the schedule title.
+ * @author David Mond
  */
 public class WolfScheduler {
 	/** Catalog for all the courses*/

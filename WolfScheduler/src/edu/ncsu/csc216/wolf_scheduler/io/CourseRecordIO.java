@@ -12,7 +12,10 @@ import java.util.Scanner;
 import edu.ncsu.csc216.wolf_scheduler.course.Course;
 
 /**
- * Reads Course records from text files.  Writes a set of CourseRecords to a file.
+ * Reads Course records from text files.  Writes a set of CourseRecords to a file. It contains
+ * 3 methods, readCourseStrings, readCourse, and writeCourseRecords. These methods
+ * are how the class actually reads the course records as well as write them. It has no fields
+ * as they are not needed for the implementation.
  * 
  * @author David Mond
  */
